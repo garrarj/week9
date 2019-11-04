@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="styles/default.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/8adcfe620b.js" crossorigin="anonymous"></script>
+    <title>MAD9013 - Week 9</title>
+</head>
+<body>
+     <!--
+        This week we will discussing:
+        - Video
+        - Audio
+        - Icons
+    -->
+
+    <header>
+        <h1>Mad9013 Week 9 content</h1>
+        <nav>
+            <a class="nav-links" href="#">Link</a>
+            <a class="nav-links" href="#">Link</a>
+            <a class="nav-links" href="#">Link</a>
+            <a class="nav-links" href="#">Link</a>
+            <a class="mobile-nav-link" href="#">&#9776;</a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Video</h2>
+            <h3>Common video file formats</h3>
+            <ul>
+                <li>
+                    <strong>.MP4</strong><br>
+                    <p>The .MP4 video file format is one of the most common and is compatible with an enourmous range of players. Many video streaming services, like Youtube, Vimeo, etc., prefer the .MP4 format</p>
+                </li>
+                <li>
+                    <strong>.MOV</strong><br>
+                    <p>MOV was developed by Apple as a file format to use with their Quicktime player. MOV files are usually high quality and large in size</p>
+                </li>
+                <li>
+                    <strong>.AVI</strong><br>
+                    <p>One of the oldest and must universally compatible video file formats. AVI tends to be large files.</p>
+                </li>
+                <li>
+                    <strong>.WMV</strong><br>
+                    <p>WMV (Windows Media Videos) can be smaller in size, but are often poorer quality compared to the other formats above.</p>
+                </li>
+            </ul>
+            <!-- 
+                Video files for the web are containers which hold the video data and audio data and keep thesee two in sync. 
+
+                These data files need to be compressed when stored to the keep the file sizes low, and decompressed when played. Thus the term 'codec'(compression/decompression) is used when discussing video file types
+
+                Video Converter: http://www.mirovideoconverter.com/
+
+                The video tag scans for compatibility from top to bottom, so place the video file you prefer as the first source element
+
+                video attributes:
+                - controls
+                - muted
+                - loop
+                - autoplay
+                - poster
+
+            -->
+
+            <video class="vid-container">
+                <source src="" type=""/>
+
+                <!-- Any child of the video tag that is NOT a source element is considered a fallback -->
+                <p><a href="" download>Download the video file</a></p>
+            </video>
+
+        </section>
+        <section>
+            <h2>Audio</h2>
+            <h3>Common audio file formats</h3>
+            <ul>
+                <li>
+                    <strong>.WAV</strong><br>
+                    <p>WAV stands for 'Waveform Audio File Format' and tend to be large files due to their uncompressed format</p>
+                </li>
+                <li>
+                    <strong>.AIFF</strong><br>
+                    <p>AIFF stands for 'Audio Interchange File Format' and was developed by Apple in 1988. They tend to be large files due to their uncompressed format</p>
+                </li>
+                <li>
+                    <strong>.MP3</strong><br>
+                    <p>MP3 stands for 'MPEG-1 Audio Layer 3' and is one of the most common audio file formats. MP3 files have nearly univeral compaitibility</p>
+                </li>
+                <li>
+                    <strong>.FLAC</strong><br>
+                    <p>FLAC stands for 'Free Lossless Audio Codec. It is a lossless compression file format, so it can feature smaller file sizes than uncompressed formats while maintaining a high degree of audio fidelity.</p>
+                </li>
+            </ul>
+
+            <!--
+                Styling the HTML5 audio player is fairly limited
+
+                Audio tag attributes:
+                - controls
+                - muted
+                - autoplay (many browser do not support this attribute)
+                - preload
+                --- none (do not preload)
+                --- auto (try to preload)
+                --- metadata (load information about file)
+
+            -->
+
+            <audio>
+                <source src="" type="" />
+
+                <!-- Any child of the audio tag that is NOT a source element is considered a fallback -->
+                <p><a href="" download>Download the audio file</a></p>
+            </audio>
+            
+        </section>
+        <section>
+            <h2>Icons</h2>
+            <p>Rather than import a series of images, services such as <a href="https://fontawesome.com/">Fontawesome</a> allows programmers access to a library icons to use in their projects</p>
+            <!-- 
+                FontAwesome is a library filled with free to use, and paid, icons
+
+                Begin by linking to the Fontawsome icon library
+                -- create account
+                -- Add CDN link to <head>
+                -- Peruse Fontawesome Gallery: https://fontawesome.com/icons?d=gallery&m=free
+
+                Unicode declarations - &#x[icon code]
+                <i> declarations
+
+                <i class="fab">&#xf368;</i>
+                <i class="fab fa-accessible-icon"></i>
+            -->
+
+            <div class="icon-container">
+
+            </div>
+
+
+        </section>
+    </main>
+    <footer>
+        <nav>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+        </nav>
+        <p>Copyright 2019</p>
+    </footer>
+</body>
+</html>

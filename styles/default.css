@@ -1,0 +1,146 @@
+/* Some default styling for the page */
+
+@import url('https://fonts.googleapis.com/css?family=Merriweather|Raleway&display=swap');
+
+:root{
+    --lg:  lightgrey;
+    --dg: darkgrey;
+    --w: white;
+    --offW: snow;
+    --blue: #006991;
+    --deSatBlue: hsl(209, 50%, 58%);
+    --deSatBlue75: hsla(206, 50%, 58%, 0.75);
+    --deSatRed: hsl(0, 59%, 49%);
+    --deSatRed75: hsla(0, 59%, 49%, 0.75);
+    --deSatGreen: hsl(94, 55%, 41%);
+    --deSatGreen75:hsla(94, 55%, 41%, 0.75);
+    --deSatOrange:hsl(41, 71%, 63%);
+    --deSatOrange75:hsla(41, 71%, 63%, 0.75);
+    --deSatPurple: hsl(282, 43%, 62%);
+    --deSatPurple75: hsla(282, 43%, 62%, 0.75);
+    --deSatTeal:hsl(172, 52%, 56%);
+    --deSatTeal75:hsla(172, 52%, 56%, 0.75);
+    --headerFont:'Merriweather', Georgia, serif;
+    --bodyFont: 'Raleway', Arial, sans-serif;
+    --nerdFont: 'Courier New', Courier, monospace;
+}
+header{
+    padding: 20px;
+    background-color: var(--lg);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    font-family: var(--headerFont);
+    text-align: center;
+    z-index: 1;
+}
+
+header h1{
+    margin-bottom: 25px;
+}
+
+header nav a{
+   padding: 15px 50px;
+   margin: 0 10px;
+   text-decoration: none;
+   background-color: var(--dg);
+   color: var(--w);
+   font-size: 1.2em;
+}
+
+.nav-links:hover{
+    background-color: var(--deSatRed);
+}
+.nav-links:active{
+    background-color: var(--deSatGreen);
+    padding: 15px 100px;
+}
+
+.mobile-nav-link{
+    display: none;
+}
+
+main{
+    background-color: var(--offW);
+    padding: 50px 75px;
+    margin: 110px 10px 10px 10px;
+    font-family: var(--bodyFont);
+    line-height: 24px;
+}
+
+main div{
+    text-align: center;
+    margin: 25px;
+}
+.vid-container{
+    width: 50vw;
+    height: auto;
+    margin-bottom: 50px;
+}
+
+.icon-container{
+    width: 50vw;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+}
+
+footer{
+    text-align: center;
+    background-color: var(--lg);
+    padding: 20px;
+}
+footer nav a{
+    padding: 5px 15px;
+    margin: 0 10px;
+    background-color: var(--dg);
+    text-decoration: none;
+    color: var(--w);
+    font-size: 0.8em;
+}
+
+footer p{
+    color: var(-w);
+    font-family: var(--nerdFont);
+}
+
+/********* MEDIA QUERIES **********/
+
+@media (max-width: 950px){
+    /* Adjusting the spacing of the nav links */
+    header nav a{
+        padding: 5px 10px;
+        margin: 0 5px;
+    }
+
+}
+
+/* Breakpoint: any viewport smaller than 650px will by styled by this declaration */
+@media (max-width: 650px){
+    /* Adjusting the size and spacing of the h1 in the header */
+    header h1{
+        display: inline;
+        position: relative;
+        top: 25px;
+        font-size: 24px;
+    }
+
+    /* reducing the negative space around the main tag */
+    main{
+        margin: 50px 5px 5px 5px;
+        padding: 50px 35px;
+        line-height: 28px;
+    }
+
+    /* removing the nav links.. */
+    .nav-links{
+        display: none;
+    }
+
+    /* ...Activating the mobile nav link */
+    .mobile-nav-link{
+        display: inline;
+        position: relative;
+        left: 175px;
+    }
+}
