@@ -85,6 +85,10 @@ main div{
     flex-direction: row;
 }
 
+.icon-container>i{
+    padding: 5px 10px;
+}
+
 footer{
     text-align: center;
     background-color: var(--lg);
