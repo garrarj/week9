@@ -87,6 +87,8 @@ main div{
 
 .icon-container>i{
     padding: 5px 10px;
+    color: red;
+    font-size: 35px;
 }
 
 footer{

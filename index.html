@@ -62,15 +62,22 @@
                 - muted
                 - loop
                 - autoplay
-                - poster
+                - poster (i.e. thumbnail)
 
             -->
 
-            <video class="vid-container">
-                <source src="" type=""/>
+            <video class="vid-container"
+                autoplay
+                muted
+                controls
+                poster="img/poster.png">
+                <source src="video/ExampleVideo.mp4" type="video/mp4"/>
+                <source src="video/ExampleVideo.mov" type="video/mov" />
+                <source src="video/ExampleVideo.avi" type="video/avi"/>
+                <source src="video/ExampleVideo.wmv" type="video/wmv" />
 
                 <!-- Any child of the video tag that is NOT a source element is considered a fallback -->
-                <p><a href="" download>Download the video file</a></p>
+                <p><a href="video/ExampleVideo.mp4" download>Download the video file</a></p>
             </video>
 
         </section>
@@ -102,7 +109,7 @@
                 Audio tag attributes:
                 - controls
                 - muted
-                - autoplay (many browser do not support this attribute)
+                - autoplay (many browsers do not support this attribute)
                 - preload
                 --- none (do not preload)
                 --- auto (try to preload)
@@ -110,17 +117,22 @@
 
             -->
 
-            <audio>
-                <source src="" type="" />
+            <audio 
+                controls
+                preload="auto">
+                <source src="audio/ExampleSong.aif" type="audio/aiff" />
+                <source src="audio/ExampleSong.mp3" type="audio/mp3" />
+                <source src="audio/ExampleSong.flac" type="audio/flac" />
+                <source src="audio/ExampleSong.wav" type="audio/wav" />
 
                 <!-- Any child of the audio tag that is NOT a source element is considered a fallback -->
-                <p><a href="" download>Download the audio file</a></p>
+                <p><a href="audio/ExampleSong.mp3" download>Download the audio file</a></p>
             </audio>
             
         </section>
         <section>
             <h2>Icons</h2>
-            <p>Rather than import a series of images, services such as <a href="https://fontawesome.com/">Fontawesome</a> allows programmers access to a library icons to use in their projects</p>
+            <p>Rather than import a series of images, services such as <a href="https://fontawesome.com/">Fontawesome</a> allows programmers access to a library of icons to use in their projects</p>
             <!-- 
                 FontAwesome is a library filled with free to use, and paid, icons
 
@@ -129,18 +141,25 @@
                 -- Add CDN link to <head>
                 -- Peruse Fontawesome Gallery: https://fontawesome.com/icons?d=gallery&m=free
 
-                Unicode declarations - &#x[icon code]
-                <i> declarations
+                - To link to the FontAwesome icon library, you need to include a FontAwesome class name on your html element
+                --- e.g. <i class="fas"></i>
+                --- The example above is showing the classname for the "Font Awesome Solid" library
 
-                <i class="fab">&#xf368;</i>
-                <i class="fab fa-accessible-icon"></i>
+                Unicode declarations (how to display a special character)
+                - begin with this three symbol code: "&#x"
+                - paste the four digit icon code for your icon (bicyle icon is "f206")
+                - end your unicode declaration with a semi-colon
+                - e.g. "&#xf206;"
+
+                <i class="fas">&#xf206;</i> - this will load the bicycle icon
+                <i class="fas fa-bicycle"></i> - this will load the same bicycle icon
+
             -->
 
             <div class="icon-container">
-
+                    <i class="fas">&#xf206;</i>
+                <i class="fas fa-bicycle"></i>
             </div>
-
-
         </section>
     </main>
     <footer>
